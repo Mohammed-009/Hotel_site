@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+    <!-- animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- #################################### Header section (navbar) ########################################### -->
+    <section class="hero-section">
+      <nav class="navbar">
+        <div class="data-container">
+          <img src="images/S-logo.png" class="Logo" />
+          <div id="menu-time" class="menu-data animate__animated">
+            <a onclick="closebar()">
+              <i id="close" class="bi bi-x-lg"></i>
+              <!-- <i id="close" class="size fa-solid fa-xmark"></i> -->
+            </a>
+            <a href="#home" class="link-head">Home</a>
+            <a href="#about" class="link-head">About</a>
+            <a href="#menu" class="link-head">Menu</a>
+            <a href="#gallery" class="link-head">Gallery</a>
+            <a href="#contact" class="link-head">Contact</a>
+            <a href="#contact" class="btn btn-primary btn-sm ml-5">Book now</a>
+          </div>
+          <a id="Menu-bar" onclick="menubar()">
+            <!-- <i class="bi bi-heart-fill"></i> -->
+            <i class="bi bi-list fs-3"></i>
+          </a>
+        </div>
+      </nav>
+      <div class="hero-section-content">
+          <div class="content">
+            <h1 class="title">The Nomasana Hotel
+              <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+              </div>
+            </h1>
+            <h1 class="fw-bold text-capitalize text-white">The best place to enjoy delicious meals with your partner</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### Carousel section (slider) ########################################### -->
+    <section>
+      <div id="hotel-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#hotel-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hotel-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hotel-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active div-height">
+            <img
+              src="images/slider-01.jpg"
+              class="d-block w-100 img-height"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <h1 class="display-2 fw-bolder text-capitalize">
+                Welcome to Nomasana hotel
+              </h1>
+              <p class="fs-3 mt-5 text-capitalize">
+                Discover the Best Delicious Meals with us.
+              </p>
+              <a href="#contact" class="btn btn-success py-2 px-4 fs-5 fw-bolder reservation-button">Reservation</a>
+            </div>
+          </div>
+          <div class="carousel-item div-height">
+            <img
+              src="images/slider-02.jpg"
+              class="d-block w-100 img-height"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <h1 class="display-2 fw-bolder text-capitalize">
+                Welcome to Nomasana hotel
+              </h1>
+              <p class="fs-3 mt-5 text-capitalize">
+                Discover the Best Delicious Meals with us.
+              </p>
+              <a href="#contact" class="btn btn-success py-2 px-4 fs-5 fw-bolder reservation-button">Reservation</a>
+            </div>
+          </div>
+          <div class="carousel-item div-height">
+            <img
+              src="images/slider-03.jpg"
+              class="d-block w-100 img-height"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <h1 class="display-2 fw-bolder text-capitalize">
+                Welcome to Nomasana hotel
+              </h1>
+              <p class="fs-3 mt-5 text-capitalize">
+                Discover the Best Delicious Meals with us.
+              </p>
+              <a href="#contact" class="btn btn-success py-2 px-4 fs-5 fw-bolder reservation-button">Reservation</a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#hotel-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#hotel-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+<!-- #################################### About us section ########################################### -->
+    <section id="about" class="text-center mt-2 background-img-set">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="text-capitalize about-color fw-bold">About our hotel</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="text-center">
+              <h4 class="about-h4">Best place to enjoy your life</h4>
+            </div>
+            <div class="text-start">
+              <p class="lead p-3">
+                Welcome to your perfect getaway! At Nomasana Hotel, we blend comfort, 
+                elegance, and exceptional service to create unforgettable experiences. 
+                Whether you're here for relaxation, romance, or adventure, 
+                our hotel offers everything you need to enjoy life to the fullest—luxurious rooms, 
+                world-class dining, stunning views, and personalized hospitality. 
+                Discover why guests return time and again. Your escape starts here
+              </p>
+              <div class="text-center">
+                <a href="#contact" class="btn btn-primary fw-bold learn-btn w-25">Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center py-3">
+              <img src="images/AR.jpg" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center mt-4">
+          <div class="col-12 col-md-6">
+            <div class="text-center mb-2">
+              <h4 class="about-h4">Rooms</h4>
+            </div>
+            <div class="text-center">
+              <img src="images/G2.jpg" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center mt-3">
+              <p class="text-center fw-bold fs-2">Ksh. 8000</p>
+              <p class="lead pt-2">
+                At Nomasana, every room is a haven of peace and comfort. 
+                Designed with your relaxation in mind, our accommodations range from cozy standard rooms to elegant suites, 
+                each offering a perfect blend of style and convenience. 
+                Enjoy amenities like soft premium bedding, modern décor, smart TVs, 
+                complimentary Wi-Fi, and well-appointed bathrooms. 
+                Whether you're here for business or leisure, you'll find the space you need to rest, 
+                recharge, and feel truly at ease. Wake up refreshed and ready to enjoy every moment of your stay.
+              </p>
+              <a href="#" class="btn btn-primary fw-bold learn-btn">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-12 col-md-6">
+            <div class="text-center py-3 mt-3">
+              <img src="images/pic1.jpg" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center my-3">
+              <p class="text-center fw-bold fs-2">Ksh. 4000</p>
+              <p class="lead pt-2">
+                Step into a space designed for rest and relaxation. 
+                Our rooms are thoughtfully furnished with a blend of modern elegance and cozy comfort to make you feel right at home. 
+                Whether you choose a standard room, deluxe suite, or executive option, each features plush bedding, 
+                high-speed Wi-Fi, air conditioning, flat-screen TVs, and spacious bathrooms. 
+                Some rooms offer private balconies with stunning views—perfect for unwinding after a long day. 
+                Clean, quiet, and carefully maintained, our rooms provide the perfect retreat for every traveler
+              </p>
+              <a href="#" class="btn btn-primary fw-bold learn-btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### our menu section ########################################### -->
+    <section id="menu" class="mt-2 text-center bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="text-capitalize py-1 about-color fw-bold">Our menu</h2>
+        </div>
+        <div class="row">
+          <ul class="nav nav-tabs justify-content-center g-2 py-1" id="myTab" role="tablist"> 
+            <li class="nav-item" role="presentation">
+              <button class="active btn btn-primary btn-sm fs-5 me-2 me-md-4 menu-background" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-primary btn-sm fs-5 me-2 me-md-4 menu-background" id="drink-tab" data-bs-toggle="tab" data-bs-target="#drink-tab-pane" type="button" role="tab" aria-controls="drink-tab-pane" aria-selected="false">Drinks</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-primary btn-sm fs-5 me-2 me-md-4 menu-background" id="lunch-tab" data-bs-toggle="tab" data-bs-target="#lunch-tab-pane" type="button" role="tab" aria-controls="lunch-tab-pane" aria-selected="false">Lunch</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-primary btn-sm fs-5 me-2 me-md-4 menu-background" id="dinner-tab" data-bs-toggle="tab" data-bs-target="#dinner-tab-pane" type="button" role="tab" aria-controls="dinner-tab-pane" aria-selected="false">Dinner</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- All foods -->
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <!-- -->
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/D1.jpeg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 700</button>
+                    <p class="lead fs-4 fw-bold text-light">Freshly Squeezed Juices (Orange, Mango, Pineapple, Watermelon)</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/D3.jpeg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 2000</button>
+                    <p class="lead fs-4 fw-bold text-light">House Wine (Red, White, or Rosé)</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-03.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 800</button>
+                    <p class="lead fs-4 fw-bold text-light">Fresh Fruit Smoothies</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-05.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 900</button>
+                    <p class="lead fs-4 fw-bold text-light">Vegetable and Paneer Curry with Basmati Rice</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-06.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1400</button>
+                    <p class="lead fs-4 fw-bold text-light">Gourmet Burger with Sweet Potato Fries</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-07.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1200</button>
+                    <p class="lead fs-4 fw-bold text-light">Grilled Chicken with Mediterranean Salad and Olive Oil Dressing</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-09.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 3000</button>
+                    <p class="lead fs-4 fw-bold text-light">Lobster Thermidor with Garlic Butter</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-08.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1400</button>
+                    <p class="lead fs-4 fw-bold text-light">Chicken Marsala with Mushrooms and Mashed Potatoes</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-01.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 2000</button>
+                    <p class="lead fs-4 fw-bold text-light">Slow-Cooked Lamb Shank with Red Wine Reduction</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drinks only -->
+            <div class="tab-pane fade" id="drink-tab-pane" role="tabpanel" aria-labelledby="drink-tab" tabindex="0">
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/D1.jpeg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 700</button>
+                    <p class="lead fs-4 fw-bold text-light">Freshly Squeezed Juices (Orange, Mango, Pineapple, Watermelon)</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/D3.jpeg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 2000</button>
+                    <p class="lead fs-4 fw-bold text-light">House Wine (Red, White, or Rosé)</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-03.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 800</button>
+                    <p class="lead fs-4 fw-bold text-light">Fresh Fruit Smoothies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lunch meal -->
+            <div class="tab-pane fade" id="lunch-tab-pane" role="tabpanel" aria-labelledby="lunch-tab" tabindex="0">
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-05.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 900</button>
+                    <p class="lead fs-4 fw-bold text-light">Vegetable and Paneer Curry with Basmati Rice</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-06.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1400</button>
+                    <p class="lead fs-4 fw-bold text-light">Gourmet Burger with Sweet Potato Fries</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-07.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1200</button>
+                    <p class="lead fs-4 fw-bold text-light">Grilled Chicken with Mediterranean Salad and Olive Oil Dressing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dinner meal -->
+            <div class="tab-pane fade" id="dinner-tab-pane" role="tabpanel" aria-labelledby="dinner-tab" tabindex="0">
+              <div class="row mt-4 g-3">
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-09.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 3000</button>
+                    <p class="lead fs-4 fw-bold text-light">Lobster Thermidor with Garlic Butter</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-08.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 1400</button>
+                    <p class="lead fs-4 fw-bold text-light">Chicken Marsala with Mushrooms and Mashed Potatoes</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 animations">
+                  <img src="images/img-01.jpg" alt="" class="img-fluid d-block mx-auto pt-3">
+                  <div class="text-center my-3">
+                    <button class="btn btn-primary btn-sm w-25">ksh 2000</button>
+                    <p class="lead fs-4 fw-bold text-light">Slow-Cooked Lamb Shank with Red Wine Reduction</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### our gallery section ########################################### -->
+    <section id="gallery" class="text-center background-blur">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="text-capitalize py-1 about-color fw-bold">Our Gallery</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-01.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-02.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-03.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-04.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-05.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 hover01">
+            <div>
+              <figure><img src="images/gallery-img-06.jpg" class="img-fluid" /></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### contact us section ########################################### -->
+    <section id="contact" class="text-center mt-2 background-touch">
+      <div class="container">
+        <div class="row justify-content-center my-scale">
+          <h2 class="text-capitalize text-white py-1 fw-bold">Get in touch with us</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <div class="p-4 bg-light border-circle">
+              <form action="#">
+                <div class="form-group mb-4 text-start">
+                  <label for="name" class="mb-1">Name</label>
+                  <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="form-group mb-4 text-start">
+                  <label for="email" class="mb-1">Email</label>
+                  <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="form-group mb-4 text-start">
+                  <label for="phone" class="mb-1">Phone</label>
+                  <input type="text" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group text-start mb-4">
+                  <label for="message" class="mb-1">Message</label>
+                  <textarea name="message" id="message" cols="10" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group my-4">
+                  <button type="submit" class="btn btn-primary w-25 pt-2 fw-bold learn-btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="pt-4 text-center justify-content-center">
+              <h2 class="lead mb-2 display-4 fw-bold">
+                Book Your Holiday <br> Best for relaxed retreats <br> and cultural encounters
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### sub-contact section ########################################### -->
+    <section class="text-center py-5 contact-details">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-4">
+            <div class="d-sm-flex text-white align-items-center justify-content-center">
+              <i class="bi bi-telephone fs-2 me-2"></i>
+              <div class="fs-4">
+                +254704895174
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="d-sm-flex text-white align-items-center justify-content-center">
+              <i class="bi bi-envelope fs-2 me-2"></i>
+              <div class="fs-4">
+                example201@gmail.com
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="d-sm-flex text-white align-items-center justify-content-center">
+              <i class="bi bi-geo-alt-fill fs-2 me-2"></i>
+              <div class="fs-4">
+                800, mombasa, Coast
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################### Footer section ########################################### -->
+    <section>
+      <footer>
+        <div class="row primary">
+          <div class="column about">
+            <h3>Nomasana Hotel</h3>
+            <p>
+              Nomasana hotel offers authentic cuisine, warm hospitality, 
+              and unforgettable dining. We blend quality ingredients, 
+              skilled chefs, and a passion for food to create exceptional experiences in a welcoming atmosphere.
+            </p>
+          </div>
+          <div class="column links">
+            <h3>Quick Links</h3>
+            <ul class="my-footer">
+              <li class="footer-list">
+                <a href="#home" class="link-page">Home</a>
+              </li>
+              <li class="footer-list">
+                <a href="#About" class="link-page">About</a>
+              </li>
+              <li class="footer-list">
+                <a href="#menu" class="link-page">Menu</a>
+              </li>
+              <li class="footer-list">
+                <a href="#gallery" class="link-page">Gallery</a>
+              </li>
+              <li class="footer-list">
+                <a href="#contact" class="link-page">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column subscribe">
+            <h3>Subscribe</h3>
+            <div>
+              <input type="email" placeholder="Your email id here" class="form-control form-control-lg"/>
+              <button class="btn btn-primary mt-3 w-100 color-subscribe">Subscribe</button>
+            </div>
+            <div class="social">
+              <i class="bi bi-facebook fs-2"></i>
+              <i class="bi bi-instagram fs-2"></i>
+              <i class="bi bi-twitter fs-2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row copyright">
+          <p>&copy; <span id="year"></span> Mohaa Dev. All rights reserved.</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- links -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
