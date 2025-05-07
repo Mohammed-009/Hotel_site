@@ -106,31 +106,7 @@ html, body {
     display: block;
   }
 }
-.hero-section-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(white);
-}
 
-.hero-section-content h1 {
-  font-size: var(40px);
-  text-transform: capitalize;
-  text-align: center;
-  padding: 10px 15px;
-  color: white;
-}
-
-.hero-section-content p {
-  font-size: var(24px);
-  color: rgb(165, 165, 165);
-  text-transform: capitalize;
-  text-align: center;
-  padding: 10px 15px;
-}
 
 /* end navbar section */
 
@@ -178,6 +154,32 @@ html, body {
 *::after {
   font-family: inherit;
   box-sizing: border-box;
+}
+
+.hero-section-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(white);
+}
+
+.hero-section-content h1 {
+  font-size: var(40px);
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+}
+
+.hero-section-content p {
+  font-size: var(24px);
+  color: rgb(165, 165, 165);
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px 15px;
 }
 
 .content {
