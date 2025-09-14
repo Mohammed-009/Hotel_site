@@ -482,9 +482,10 @@
           <div class="col-12 col-lg-6">
             <div class="p-4 bg-light border-circle">
               
-              <div id="form-success" class="alert alert-success d-none" role="alert">
-                ✅ Form submitted successfully!
-              </div>
+                <div id="form-success" class="alert alert-success alert-dismissible fade d-none" role="alert">
+                  ✅ Form submitted successfully!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
               
               <form id="my-form" action="https://formspree.io/f/mpwjezrk" method= "post">
                 <div class="form-group mb-4 text-start">
@@ -635,10 +636,18 @@
       });
 
       if (response.ok) {
-        form.reset();                                     // clear fields
-        successAlert.classList.remove('d-none');          // show success
+        form.reset();
+
+        // Show alert
+        successAlert.classList.remove('d-none');
+        successAlert.classList.add('show'); // triggers Bootstrap fade-in
+
+        // Automatically hide after 5 seconds
+        setTimeout(() => {
+          successAlert.classList.remove('show');
+          successAlert.classList.add('d-none');
+        }, 5000);
       } else {
-        // Optional: handle errors
         alert('There was a problem submitting the form.');
       }
     } catch (error) {
@@ -646,7 +655,7 @@
     }
   });
 
-      document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 
